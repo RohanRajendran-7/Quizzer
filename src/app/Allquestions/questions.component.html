@@ -1,0 +1,37 @@
+<div class="sticky">
+<div class="container">
+  <nav class="nav justify-content-center ">
+    <li class="nav-item">
+      <a class="nav-link " routerLink="/createQuestion">Create Question</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/updateQuestion" >Update Question</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/deleteQuestion" >Delete Question</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/questionsList" >Questions list</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/searchQuestion" >Search Question</a>
+    </li>
+  </nav>
+</div>
+</div>
+<br><br>
+
+<div class="container-fluid">
+    <div class="wrapper">
+        <div class="card" style="width: auto;" *ngFor="let question of questionList">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{question.id}}</h5>
+                <p class="card-text">Id : {{question.id}}</p>
+                <p class="card-text">Category : {{question.category}}</p>
+                <p class="card-text">Name : {{question.name}}</p>
+                <p class="card-text">Answer : {{question.answer}}</p>
+                <button ><a style="color: bisque;" routerLink="/updateQuestion" >Update Question</a></button>
+            </div>
+        </div>
+    </div>
+</div>
